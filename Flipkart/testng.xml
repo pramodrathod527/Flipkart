@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression" thread-count="2" parallel="classes">
+
+<test name="ChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+    <!--<class name="com.TestNG.verifySignUpPage"/>   --> 
+      <class name="com.TestNG.VerifyBecomeSeller"/>
+    </classes>
+  </test> <!-- Test -->
+
+<test  name="FirefoxTest" enabled="false">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="com.TestNG.verifySignUpPage"/>
+      <class name="com.TestNG.VerifyBecomeSeller"/> 
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="EdgeTest" enabled="false">
+  <parameter name="browser" value="Edge"></parameter>
+    <classes>
+      <class name="com.TestNG.verifySignUpPage"/>
+      <class name="com.TestNG.VerifyBecomeSeller"/> 
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+</suite> <!-- Regression -->
